@@ -24,6 +24,7 @@
      + Le déplacemment de la première à la deuxième ligne a été fait à la ligne 153 du fichier app.c à l'aide de la fonction lcd_gotoxy(1,2).
      + "/ car: -" est affiché sur la dixième colonne de la troisième ligne du LCD avec l'appel de la fonction printf_lcd("/ car: -") à la ligne 156 du fichier app.c.
      + Le déplacemment de la deuxième à la troisième ligne et de la première à la dixième colonne a été fait à la ligne 155 du fichier app.c à l'aide de la fonction lcd_gotoxy(10,3).
+     + A FINIR
     
 
 2. Faire fonctionner le programme en envoyant des caractères au clavier depuis PuTTY.  :
