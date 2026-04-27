@@ -19,7 +19,9 @@
    + où et comment les données sont décodées en température ou caractère reçu, et les erreurs décelées,  :
      + blablabla
    + ce qui est affiché  :
-     + blablabla
+     + "EMSY3 TP5 FreeRTOS" est affiché sur le LCD avec l'appel de la fonction printf_lcd("EMSY3 TP5 FreeRTOS") à la ligne 152 du fichier app.c.
+     + "Demo sans OS" est affiché sur le LCD avec l'appel de la fonction printf_lcd("Demo sans OS") à la ligne 154 du fichier app.c.
+     + "/ car: -" est affiché sur le LCD avec l'appel de la fonction printf_lcd("/ car: -") à la ligne 156 du fichier app.c.
     
 
 2. Faire fonctionner le programme en envoyant des caractères au clavier depuis PuTTY.  :
