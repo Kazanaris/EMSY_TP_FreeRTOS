@@ -15,9 +15,16 @@
         - Frame 7 : Remplissage avec 0 pour carractère UART, sinon fini de remplir le checksum pour les caractères de température,
         - Frame 8 : Remplissage avec 0 pour carractère UART, sinon vaut 3 pour fin de trame de température.
    + Où elles sont relues,  :
-     + blablabla
+     + ça se trouvent dans le fichier app.c à la ligne 245 avec GetReadSize(&fifoLcd)qui nous idique combien de caractères il y'a dans la fifo pour pouvoir faire un teste si il y'a un truc à lire.
+     + et toujours dans le même fichier à la ligne 251 avec l'appel de fonction GetCharFromFifo(&fifoLcd, (int8_t*)&car) on lis les caractères stockée en fifo.
    + Où et comment les données sont décodées en température ou caractère reçu, et les erreurs décelées,  :
-     + blablabla
+     + dans app.c à partire de la ligne 254, tout les caractères qui valent "0" sont jettée (c'est le padding). les autres qui sont différent de "0" sont mis dans un buffer jusqu'a ce que le dernier caractère enregistrer             dans le buffer soit la fin de trame 0x03.
+     + Ensuite pour une trame de température on contrôle que le début du buffer vaut bien "2", que le buffer fait bien une taille de 9 caractères et que le caractère suivant du début de trame soit bien l'identifiant d'une             trame de température ('1' dans ce cas-ci).
+     + Pour une trame de caractère c'est les même contrôles mais ici on contrôle que la taille du buffer fait 6 caractères et que l'identifiant de trame soit celui d'un caractère UART ('2' ici).
+     + si ces 2 tests du buffer échouent lors on incrémente de 1 le compteur d'erreur de appData, on vide le buffer, et au prochain tour on vas dans le case de retVal = 3 donc affichage message d'erreur et nombre d'erreur.
+     + une fois ces contrôles réussi on passe au contrôle de checksum du buffer(un genre de CRC).
+     + si le contrôle de checksum rate alors on incrémente de 1 le compteur d'erreur de appData, on vide le buffer, te au prochain tour on vas dans le case de retVal = 3 donc affichage message d'erreur et nombre d'erreur.
+     + quand le contrôle de checksum réussi on enregistre les datas du buffer dans appData (appData.newtemp[0 à 3] pour la température dont appData.newtemp[4] pour la fin de chaîne , et appData.newChar pour caractère                   UART), ensuite on vide le buffer, et si c'était une trame de température alors au prochain tour on vas dans le case de retVal = 1 donc affichage de la température et nombre d'erreur, sinon si c'était une                   trame de caractère UART alors au prochain tour on vas dans le case de retVal = 2 donc affichage du caractère et nombre d'erreur.
    + Ce qui est affiché  :
      + "EMSY3 TP5 FreeRTOS" est affiché sur la première colonne de la première ligne du LCD avec l'appel de la fonction printf_lcd("EMSY3 TP5 FreeRTOS") à la ligne 152 du fichier app.c.
      + "Demo sans OS" est affiché sur la première colonne de la deuxième ligne du LCD avec l'appel de la fonction printf_lcd("Demo sans OS") à la ligne 154 du fichier app.c.
