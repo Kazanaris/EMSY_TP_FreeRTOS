@@ -31,7 +31,18 @@
      + Le déplacemment de la première à la deuxième ligne a été fait à la ligne 153 du fichier app.c à l'aide de la fonction lcd_gotoxy(1,2).
      + "/ car: -" est affiché sur la dixième colonne de la troisième ligne du LCD avec l'appel de la fonction printf_lcd("/ car: -") à la ligne 156 du fichier app.c.
      + Le déplacemment de la deuxième à la troisième ligne et de la première à la dixième colonne a été fait à la ligne 155 du fichier app.c à l'aide de la fonction lcd_gotoxy(10,3).
-     + A FINIR
+     + Lorsque l'on reçois une température "t: " est affiché grâce à l'appel de la fonction printf_lcd("t: ") à la ligne 189 du fichier app.c.
+     + La valeur de la température est affichée grâce à l'appel de la fonction printf_lcd("%s", appData.newTemp).
+     + Ces deux informations sont affichées à partir de la première colonne de la troisième ligne du LCD avec l'appel de la fonction lcd_gotoxy(1,3) à la ligne 188 du fichier app.c.
+     + L'information de si nous avons des erreurs ainsi que de leurs nombres est affiché grâce à l'appel de la fonction printf_lcd(" OK / %4d erreurs", appData.nbErrors) à la ligne 192 de l'app.c.
+     + Ces deux informations sont affichées à partir de la première colonne de la quatrième ligne du LCD avec l'appel de la fonction lcd_gotoxy(1,4) à la ligne 191 du fichier app.c.
+     + Lorsque l'on reçois un caractère ce dernier est afficher grâce à l'appel de la fonction printf_lcd("/ car: %c", appData.newChar) à la ligne 198 du fichier app.c.
+     + Cette information est affichée sur le LCD à partir de la dixième colonne de la troisème ligne avec l'appel de la fonction lcd_gotoxy(10,3) à la ligne 197 du fichier app.c.
+     + L'information de si nous avons des erreurs ainsi que de leurs nombres est affiché grâce à l'appel de la fonction printf_lcd(" OK / %4d erreurs", appData.nbErrors) à la ligne 200 de l'app.c.
+     + Ces deux informations sont affichées à partir de la première colonne de la quatrième ligne du LCD avec l'appel de la fonction lcd_gotoxy(1,4) à la ligne 199 du fichier app.c.
+     + Si il y a une erreur, l'information que les données ne sont pas correctes (NOK) ainsi que le nombre d'erreurs sont afficher grâce à l'appel de
+     + la fonction printf_lcd("NOK / %4d erreurs", appData.nbErrors) à la ligne 206 du fichier app.c.
+     + Ces deux informations sont affichées à partir de la première colonne de la quatrième ligne du LCD avec l'appel de la fonction lcd_gotoxy(1,4) à la ligne 205 du fichier app.c.
     
 
 2. Faire fonctionner le programme en envoyant des caractères au clavier depuis PuTTY.  :
