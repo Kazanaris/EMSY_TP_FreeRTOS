@@ -15,8 +15,8 @@
         - Frame 7 : Remplissage avec 0 pour carractère UART, sinon fini de remplir le checksum pour les caractères de température,
         - Frame 8 : Remplissage avec 0 pour carractère UART, sinon vaut 3 pour fin de trame de température.
    + Où elles sont relues,  :
-     + ça se trouvent dans le fichier app.c à la ligne 245 avec GetReadSize(&fifoLcd)qui nous indique combien de caractères il y'a dans la fifo pour pouvoir faire un teste si il y'a un truc à lire.
-     + et toujours dans le même fichier à la ligne 251 avec l'appel de fonction GetCharFromFifo(&fifoLcd, (int8_t*)&car) on lis les caractères stockée en fifo.
+     + Ça se trouvent dans le fichier app.c à la ligne 245 avec GetReadSize(&fifoLcd)qui nous indique combien de caractères il y'a dans la fifo pour pouvoir faire un test s'il y'a un truc à lire.
+     + Et toujours dans le même fichier à la ligne 251 avec l'appel de fonction GetCharFromFifo(&fifoLcd, (int8_t*)&car) on lis les caractères stockée en fifo.
    + Où et comment les données sont décodées en température ou caractère reçu, et les erreurs décelées,  :
      + Dans app.c à partir de la ligne 254, tout les caractères qui valent "0" sont jettée (c'est le padding). les autres qui sont différent de "0" sont mis dans un buffer jusqu'a ce que le dernier caractère enregistrer             dans le buffer soit la fin de trame 0x03.
      + Ensuite pour une trame de température on contrôle que le début du buffer vaut bien "2", que le buffer fait bien une taille de 9 caractères et que le caractère suivant du début de trame soit bien l'identifiant d'une             trame de température ('1' dans ce cas-ci).
