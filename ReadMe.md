@@ -47,5 +47,24 @@
 
 2. Faire fonctionner le programme en envoyant des caractères au clavier depuis PuTTY.  :
    
-   ![test](/Partie_1_screen_edit/envoie d'un seul caractère_1(edit).png)
-4. 
+   Premier envoie de 1 caractère :
+   ![Premier envoie de 1 caractère](/Partie_1_screen_edit/envoie_un_seul_caractère_1(edit).png)
+
+   Deuxième envoie de 1 caractère
+   ![Deuxième envoie de 1 caractère](/Partie_1_screen_edit/envoie_un_seul_caractère_2(edit).png)
+   
+3. Idem mais copier plusieurs dizaines de caractères d'un seul coup :
+   + Est-ce systématique ? :
+     + Dépend du nombre de caractères mais si à chaque fois on copie-colle plusieurs dizaines de caractères alors oui ça sera systématique (dès qu’on écrit plus de 6 caractères simultanément).
+   + Comme précédemment, inspectez le déroulement temporel à l’aide des 3 signaux. :
+     + Envoie de beaucoups de caractères pour mettre le programme en galère, version dézoomée :
+       ![bombarde de caractères dézoomer](/Partie_1_screen_edit/bombarde_de_caractères_dézoomer(edit).png)
+     + Version zoomée :
+       ![bombarde de caractères zoomer](/Partie_1_screen_edit/bombarde_de_caractères_zoomer(edit_1).png)
+   + Mettez en évidence le dysfonctionnement et expliquez sa cause. :
+     + Pour résumé la fifo est pleine et le programme perd des caractères volontairement.
+     + L’app_task s’exécute seulement quand on se trouve dans les carrées rouges comme montrer ci-dessous, cependant chaque flanc sur le signale rose correspond à un caractère reçu et donc une frame de 6 espaces occupée dans la fifo (de 32 cases). Donc après 5 caractères la fifo est pleine, les seuls moment où on sort un caractère de la fifo ( donc 6 cases de libres) c’est quand on rentre dans l’app_task avec le getMessage(), donc le problème est qu’on consomme pas assez vite les caractères reçus. ( dans les carrées vert tous les caractères qu’on garde en fifo, les autres sont perdus.
+       ![bombarde de caractères zoomer (edit)](/Partie_1_screen_edit/bombarde_de_caractères_zoomer(edit_2).png)
+   + Quelle(s) solution(s) proposez-vous ? :
+     + Utiliser un free RTOS.
+     + Ou pas envoyer plus de 5 caractères à la fois.
