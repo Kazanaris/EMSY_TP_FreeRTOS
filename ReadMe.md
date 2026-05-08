@@ -46,3 +46,6 @@
     
 
 2. Faire fonctionner le programme en envoyant des caractères au clavier depuis PuTTY.  :
+   
+   ![test](/Partie_1_screen_edit/envoie d'un seul caractère_1(edit).png)
+4. 
