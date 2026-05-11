@@ -54,9 +54,9 @@
    ![Deuxième envoie de 1 caractère](/Partie_1_screen_edit/envoie_un_seul_caractère_2(edit).png)
 
    + Nous pouvons voir que :
-        + La LED0 toggle toutes les 100ms, sauf lorsque l'on envoi un caractère, En effet, l'envoi de caractère "force" le toggle de la LED. Le prochain toggle de la LED se fera en même temps que celui de la LED2.
-        + La LED1 reste dans son état jusqu'à l'envoi d'un caractère.
-        + La LED2 toggle toutes les 100ms et n'est pas affectée par l'envoi de caractère.
+        + La LED0 toggle toutes les 100ms (execution de l'APP_TASK), sauf lorsque l'on envoi un caractère, En effet, l'envoi de caractère "force" le toggle de la LED. Le prochain toggle de la LED se fera en même temps que celui de la LED2.
+        + La LED1 (interruption de l'UART 1) reste dans son état jusqu'à l'envoi d'un caractère.
+        + La LED2 (interruption du Timer 1) toggle toutes les 100ms et n'est pas affectée par l'envoi de caractère.
    
 3. Idem mais copier plusieurs dizaines de caractères d'un seul coup :
    + Est-ce systématique ? :
