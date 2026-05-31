@@ -79,4 +79,16 @@
 1. Faire fonctionner le programme en envoyant des caractères au clavier depuis PuTTY.  :
 
    Envoie d'un caractère :
+   AJOUTER L'IMAGE DE L'ENVOIE D'UN CARACTERE (RENOMMER AVEC DES _ POUR POUVOIR LE METTRE SUR LE README).
+   
+   + Comparaison avec la partie sans OS:
+      + Dans la partie sans OS, lorsque l'on envoyait un caractère dans PuTTY le signal sur la LED1 toggelait (interruption de l'UART). Dans la partie avec OS, lorsque l'on envoie un caractère
+2. Idem mais copier plusieurs dizaines de caractères d'un seul coup :
+   + AJOUTER L'IMAGE DE L'ENVOIE DE PLUSIEURS DIZAINES DE CARACTERES VERSION DEZOOMER (RENOMMER AVEC DES _ POUR POUVOIR LE METTRE SUR LE README).
 
+   + AJOUTER L'IMAGE DE L'ENVOIE DE PLUSIEURS DIZAINES DE CARACTERES VERSION ZOOMER (RENOMMER AVEC DES _ POUR POUVOIR LE METTRE SUR LE README).
+
+   + Comparaison avec la partie sans OS:
+
+
+     
