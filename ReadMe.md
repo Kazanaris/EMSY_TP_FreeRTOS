@@ -85,9 +85,19 @@
    Envoie d'un caractère (zoomer):
    ![Texte Alternatif](Partie_2_screen_edit/envoie_un_caractere_zoomer.png)
    
-   
+   + A quoi correspondent les signaux :
+     + LED_0 correspond à l'affichage sur le LCD (tâche 2 selon la machine d'état de la deuxième partie).
+     + LED_1 correspond à l'interruption de l'UART.
+     + LED_2 correspond à l'interruption du timer.
+     + LED_4 correspond à la lecture de la température (tâche 1 selon la machine d'état de la deuxième partie).
+
+
    + Comparaison avec la partie sans OS:
-      + Dans la partie sans OS, lorsque l'on envoyait un caractère dans PuTTY le signal sur la LED1 toggelait (interruption de l'UART). Dans la partie avec OS, lorsque l'on envoie un caractère
+      + Dans la partie sans OS, lorsque l'on envoyait un caractère dans PuTTY le signal sur la LED1 toggelait (interruption de l'UART). Dans la partie avec OS, lorsque l'on envoie un caractère la          LED_1 on peut voir un pic sur le signal au moment de l'interruption de l'UART. 
+        Pour la LED_0, on peut voir qu'il y a juste un pic sur ce signal au moment où il y a pic sur le signal de la LED_1. On remarque aussi que contrairement au signal de la LED_0 dans la partie         1, dans la partie 2 le signal de la LED_0 garde le même déphasage par rapport au signal de la LED_2. (En partie 1 la phase du signal de la LED_0 avait un déphasage de 180° par rapport à la         LED_2 après l'envoie d'un caractère).
+    
+      + Les signaux LED_2 et LED_4 ne sont pas influencer par l'envoie d'un caractère tous comme dans la partie 1.
+      + 
 3. Idem mais copier plusieurs dizaines de caractères d'un seul coup :
    Bombardage de caractères (dézoomer):
    ![Texte Alternatif](Partie_2_screen_edit/bombarde_de_character.png)
@@ -97,6 +107,6 @@
    ![Texte Alternatif](Partie_2_screen_edit/bombarde_de_character_zoomer.png)
 
    + Comparaison avec la partie sans OS:
-
+      +
 
      
