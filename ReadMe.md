@@ -106,7 +106,7 @@
    Bombardage de caractères (zoomer):
    ![Texte Alternatif](Partie_2_screen_edit/bombarde_de_character_zoomer.png)
 
-   CHANGER LES SCREENS PAR LES NOUVEAUX
+
    + Comparaison avec la partie sans OS:
       + Nous pouvons voir que l'envoie de plusieurs dizaines de caractères (enchainement de pic sur la LED_1) entraine une série de toggle du signal sur la LED_0. 
         Contrairement à la partie 1 où le bombardement de caractères amenait à une "surchage" de la FIFO si on avait plus de 5 caractère (on ne consommait pas les caractères assez vite), dans la           partie 2 il n'y a pas ce problème. Nous avons tester en envoyant une chaine de 39 caractères et nous pouvons voir que les enchainements de pic sur la LED_1 s'arretent juste après le début          des toggles de la LED_0.
