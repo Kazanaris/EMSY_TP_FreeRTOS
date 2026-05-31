@@ -90,11 +90,11 @@
       + Dans la partie sans OS, lorsque l'on envoyait un caractère dans PuTTY le signal sur la LED1 toggelait (interruption de l'UART). Dans la partie avec OS, lorsque l'on envoie un caractère
 3. Idem mais copier plusieurs dizaines de caractères d'un seul coup :
    Bombardage de caractères (dézoomer):
-   ![Texte Alternatif](Partie_2_screen_edit/bombarde_un_character.png)
+   ![Texte Alternatif](Partie_2_screen_edit/bombarde_de_character.png)
 
 
    Bombardage de caractères (zoomer):
-   ![Texte Alternatif](Partie_2_screen_edit/bombarde_un_character_zoomer.png)
+   ![Texte Alternatif](Partie_2_screen_edit/bombarde_de_character_zoomer.png)
 
    + Comparaison avec la partie sans OS:
 
