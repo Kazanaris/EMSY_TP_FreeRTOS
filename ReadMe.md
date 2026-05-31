@@ -78,15 +78,23 @@
 
 1. Faire fonctionner le programme en envoyant des caractères au clavier depuis PuTTY.  :
 
-   Envoie d'un caractère :
-   AJOUTER L'IMAGE DE L'ENVOIE D'UN CARACTERE (RENOMMER AVEC DES _ POUR POUVOIR LE METTRE SUR LE README).
+   Envoie d'un caractère (dézoomer):
+   ![Texte Alternatif](Partie_2_screen_edit/envoie_un_caractere.png)
+
+
+   Envoie d'un caractère (zoomer):
+   ![Texte Alternatif](Partie_2_screen_edit/envoie_un_caractere_zoomer.png)
+   
    
    + Comparaison avec la partie sans OS:
       + Dans la partie sans OS, lorsque l'on envoyait un caractère dans PuTTY le signal sur la LED1 toggelait (interruption de l'UART). Dans la partie avec OS, lorsque l'on envoie un caractère
-2. Idem mais copier plusieurs dizaines de caractères d'un seul coup :
-   + AJOUTER L'IMAGE DE L'ENVOIE DE PLUSIEURS DIZAINES DE CARACTERES VERSION DEZOOMER (RENOMMER AVEC DES _ POUR POUVOIR LE METTRE SUR LE README).
+3. Idem mais copier plusieurs dizaines de caractères d'un seul coup :
+   Bombardage de caractères (dézoomer):
+   ![Texte Alternatif](Partie_2_screen_edit/bombarde_un_caractere.png)
 
-   + AJOUTER L'IMAGE DE L'ENVOIE DE PLUSIEURS DIZAINES DE CARACTERES VERSION ZOOMER (RENOMMER AVEC DES _ POUR POUVOIR LE METTRE SUR LE README).
+
+   Bombardage de caractères (zoomer):
+   ![Texte Alternatif](Partie_2_screen_edit/bombarde_un_caractere_zoomer.png)
 
    + Comparaison avec la partie sans OS:
 
