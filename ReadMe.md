@@ -97,7 +97,7 @@
         Pour la LED_0, on peut voir qu'il y a juste un pic sur ce signal au moment où il y a pic sur le signal de la LED_1. On remarque aussi que contrairement au signal de la LED_0 dans la partie         1, dans la partie 2 le signal de la LED_0 garde le même déphasage par rapport au signal de la LED_2. (En partie 1 la phase du signal de la LED_0 avait un déphasage de 180° par rapport à la         LED_2 après l'envoie d'un caractère).
     
       + Les signaux LED_2 et LED_4 ne sont pas influencer par l'envoie d'un caractère tous comme dans la partie 1.
-      + 
+
 3. Idem mais copier plusieurs dizaines de caractères d'un seul coup :
    Bombardage de caractères (dézoomer):
    ![Texte Alternatif](Partie_2_screen_edit/bombarde_de_character.png)
@@ -106,7 +106,9 @@
    Bombardage de caractères (zoomer):
    ![Texte Alternatif](Partie_2_screen_edit/bombarde_de_character_zoomer.png)
 
+   CHANGER LES SCREENS PAR LES NOUVEAUX
    + Comparaison avec la partie sans OS:
-      +
+      + Nous pouvons voir que l'envoie de plusieurs dizaines de caractères (enchainement de pic sur la LED_1) entraine une série de toggle du signal sur la LED_0. 
+        Contrairement à la partie 1 où le bombardement de caractères amenait à une "surchage" de la FIFO si on avait plus de 5 caractère (on ne consommait pas les caractères assez vite), dans la           partie 2 il n'y a pas ce problème. Nous avons tester en envoyant une chaine de 39 caractères et nous pouvons voir que les enchainements de pic sur la LED_1 s'arretent juste après le début          des toggles de la LED_0.
 
      
