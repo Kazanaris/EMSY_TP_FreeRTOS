@@ -73,3 +73,10 @@
    + Quelle(s) solution(s) proposez-vous ? :
      + Utiliser un free RTOS.
      + Ou pas envoyer plus de 5 caractères à la fois.
+
+##  PARTIE 2 : FONCTIONNEMENT SOUS FREERTOS
+
+1. Faire fonctionner le programme en envoyant des caractères au clavier depuis PuTTY.  :
+
+   Envoie d'un caractère :
+
